@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: licence-api
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn licence_api:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
